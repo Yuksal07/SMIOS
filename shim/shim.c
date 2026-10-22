@@ -12,14 +12,16 @@
 #include "loader.h"
 #include "ufs.h"
 
-#define IMEM_RESTART_REASON	0x146aa65cUL	/* qcom,msm-imem restart_reason@65c */
+#define IMEM_RESTART_REASON    0x00000000UL
 #define RESTART_BOOTLOADER	0x77665500U
-#define PSHOLD			0x0c264000UL
+#define PSHOLD			0x10007000UL
 
-#define GICD_BASE		0x17a00000UL
-#define GICR_BASE		0x17a60000UL
-#define GICR_SIZE		0x100000UL
-#define GICR_PE_SIZE		0x20000UL
+#define GICD_BASE         0x0c000000UL
+#define GICR_BASE         0x0c100000UL
+#define GICR_SIZE         0x100000UL
+#define GICR_PE_SIZE      0x20000UL
+#define UART_BASE         0x11002000UL
+#define DRAM_START        0x4d100000UL
 #define GICR_TYPER		0x08
 #define GICR_WAKER		0x14
 #define GICR_SGI		0x10000
